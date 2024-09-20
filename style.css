@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./img/bg-stars.svg);
+    background-color: var(--Verydarkmostlyblackblue);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{    
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-around;
+
+}
+:root{
+    --Grayishblue: hsl(237, 18%, 59%);
+    --Softred: hsl(345, 95%, 68%);
+    --White: hsl(0, 0%, 100%);
+    --Darkdesaturatedblue: hsl(236, 21%, 26%);
+    --Verydarkblue: hsl(235, 16%, 14%);
+    --Verydarkmostlyblackblue: hsl(234, 17%, 12%);
+}
+p{
+    color: var(--White);
+    text-transform: uppercase;
+}
+.bold{
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: .5em;
+    text-align: center;
+}
+.time-box{
+    display: flex;
+    gap: 1em;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.box > div{
+    position: relative;
+    color: var(--Softred);
+    background-color: var(--Darkdesaturatedblue);
+    width: 120px;
+    height: 120px;
+    font-size: 4em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    letter-spacing: -5px;
+}
+.box > div::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 10px;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--Verydarkblue);
+}
+.box > div::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 5px;
+    height: 10px;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--Verydarkblue);
+}
+.light{
+    font-weight: lighter;
+    color: var(--Grayishblue);
+}
+footer{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/pattern-hills.svg);
+    width:  100%;
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+}
+footer img{
+    transition: .3s;
+    cursor: pointer;
+}
+footer img:hover{
+    background:var(--Softred);
+}
+@media (max-width:550px){
+    .bold{
+        font-size: 1em;
+        padding: 10px;
+    }
+    .box > div{
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+}
+@media (max-width:385px){
+    .box > div{
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+}
